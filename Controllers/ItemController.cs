@@ -23,6 +23,8 @@ namespace UserService.Controllers
             _mediator = mediator;
         }
 
+
+        //Funcion para distribuir los items
         [HttpPost("distribute")]
         public async Task<IActionResult> Distribute([FromBody] ItemsCommand command)
         {
@@ -30,6 +32,7 @@ namespace UserService.Controllers
             return Ok("Items Distribuidos Correctamente");
         }
 
+        //Funcion para obtener los items
         [HttpGet("getItems")]
         public async Task<ActionResult<List<Item>>> GetItems()
         {
